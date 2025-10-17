@@ -54,7 +54,7 @@ const (
 //
 // It returns the corresponding NetworkType constant if the string matches
 // a known level name, or an error if the input is invalid.
-func (g *NetworkType) Parse(value string) (NetworkType, error) {
+func (g NetworkType) Parse(value string) (NetworkType, error) {
 	var ret NetworkType
 	var err error
 	switch strings.ToUpper(value) {
