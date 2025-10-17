@@ -507,14 +507,16 @@ func (g *GXNet) errorf(lock bool, err error) {
 
 func (g *GXNet) tracef(lock bool, traceType gxcommon.TraceTypes, fmtStr string, a ...any) {
 	var cb gxcommon.TraceEventHandler
+	trace := false
 	if lock {
 		g.mu.RLock()
+		trace = !(int(g.traceLevel) < int(traceType))
 		cb = g.onTrace
 		g.mu.RUnlock()
 	} else {
 		cb = g.onTrace
 	}
-	if cb != nil {
+	if cb != nil && trace {
 		p := gxcommon.NewTraceEventArgs(traceType, fmt.Sprintf(fmtStr, a...), "")
 		var m gxcommon.IGXMedia = g
 		cb(m, *p)
