@@ -1,0 +1,4 @@
+github.com/Gurux/go-gxcommon v1.0.2 h1:CNCneaKsWzhRmzdLrdA3N9KB5aysNwIxwXnzHduZyI0=
+github.com/Gurux/go-gxcommon v1.0.2/go.mod h1:QpvWmsTnNVYXSHv+SfAJwB+u2p+gxqR1KFYArbHy+XI=
+github.com/Gurux/go-gxnet v1.0.2 h1:NZzaqe37sCPyhToBX+C7kKv67itlzIH8Na1ci5fl4XA=
+github.com/Gurux/go-gxnet v1.0.2/go.mod h1:sLh1Nb+pgJh/Z3It2B+xOoRrmubDdrO3w2G8GIhLTr0=
